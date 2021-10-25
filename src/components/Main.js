@@ -1,5 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../data/context";
+import Button from '@mui/material/Button';
+
+import PersonIcon from '@mui/icons-material/Person';
+import EmailIcon from '@mui/icons-material/Email';
+import EventBusyIcon from '@mui/icons-material/EventBusy';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import LockIcon from '@mui/icons-material/Lock';
 
 export function Main(){
 
@@ -60,19 +68,19 @@ export function Main(){
         { result ? <div id="info">
 
             <img src={result.picture.large} alt="profilePic"/>
-
-            <p className="desc">{desc}</p>
-            <p className="title">{title}</p>
-
-            <button name="name" onMouseOver={(e) => inspect(e)}>Name</button>
-            <button name="email" onMouseOver={(e) => inspect(e)}>Email</button>
-            <button name="age" onMouseOver={(e) => inspect(e)}>Age</button>
-            <button name="place" onMouseOver={(e) => inspect(e)}>Place</button>
-            <button name="phone" onMouseOver={(e) => inspect(e)}>Phone</button>
-            <button name="password" onMouseOver={(e) => inspect(e)}>Password</button>
             <br/><br/>
-            <button onClick={() => generateRandomPerson()}>Generate</button>
+            <p className="desc">{desc}</p>
+            <h2 className="title">{title}</h2>
+            <br/><br/>
+            <button name="name" onMouseOver={(e) => inspect(e)}><PersonIcon sx={{fontSize: 40}}/></button>
+            <button name="email" onMouseOver={(e) => inspect(e)}><EmailIcon sx={{fontSize: 40}}/></button>
+            <button name="age" onMouseOver={(e) => inspect(e)}><EventBusyIcon sx={{fontSize: 40}}/></button>
+            <button name="place" onMouseOver={(e) => inspect(e)}><LocationOnIcon sx={{fontSize: 40}}/></button>
+            <button name="phone" onMouseOver={(e) => inspect(e)}><PhoneEnabledIcon sx={{fontSize: 40}}/></button>
+            <button name="password" onMouseOver={(e) => inspect(e)}><LockIcon sx={{fontSize: 40}}/></button>
+            <br/><br/><br/>
+            <Button variant="contained" className="generate"  onClick={() => generateRandomPerson()}>Generate</Button>
 
-        </div> : "Loading..."}
+        </div> : <h3>Loading...</h3>}
     </div>)
 }
