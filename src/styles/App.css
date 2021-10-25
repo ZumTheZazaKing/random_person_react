@@ -49,6 +49,9 @@ body #Main .generate {
   background: #204de0;
   color: white;
 }
+body #Main .generate:hover {
+  color: white;
+}
 
 @media only screen and (max-width: 750px) {
   #Main {
