@@ -16,6 +16,9 @@ body .App {
   justify-content: center;
   align-items: center;
 }
+body .App .loading {
+  color: white;
+}
 body #Main {
   background-color: white;
   padding: 40px 20px;

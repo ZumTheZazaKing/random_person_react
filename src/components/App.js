@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<h1 classname="loading">Loading...</h1>}>
         <Context.Provider value={{
           result, setResult
         }}>
